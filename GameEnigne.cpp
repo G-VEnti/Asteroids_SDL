@@ -58,7 +58,7 @@ void GameEngine::Update() {
 			IM.Listen();
 
 			//UPDATE
-			currentScene->Update(dt);
+			currentScene->Update(dt, renderer);
 
 			//RENDER
 			SDL_RenderClear(renderer);

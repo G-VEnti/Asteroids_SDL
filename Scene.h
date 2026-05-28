@@ -15,7 +15,7 @@ public:
 	
 	};
 
-	virtual void Update(float dt) {
+	virtual void Update(float dt, SDL_Renderer* rend) {
 		for (GameObject* var : objects)
 		{
 			var->Update(dt);

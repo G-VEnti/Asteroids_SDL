@@ -16,7 +16,7 @@ Spaceship::Spaceship(SDL_Renderer* renderer, Vector2 pos, float rot, Vector2 scl
 	angularDrag = 6.0f;
 
 	linearAccFactor = 500.0f;		 // PX / seg²
-	angularAccFactor = 180000.0f;	 // Deg / seg²
+	angularAccFactor = 1500.0f;	 // Deg / seg²
 
 
 	linearAcceleration = Vector2(1.2, 1.2);
@@ -32,8 +32,8 @@ void Spaceship::UpdateMovement(float dt)
 
 		Vector2 dir;
 		float rotInRad = rotation * (M_PI / 180.0f);
-		dir.x = cos(rotation);
-		dir.y = sin(rotation);
+		dir.x = cos(rotInRad);
+		dir.y = sin(rotInRad);
 
 
 		linearAcceleration = dir * linearAccFactor;
@@ -43,11 +43,11 @@ void Spaceship::UpdateMovement(float dt)
 
 	if (IM.GetKey(SDLK_d, HOLD))
 	{
-		angularAcceleration = angularAccFactor * dt;
+		angularAcceleration = angularAccFactor;
 	}
 	if (IM.GetKey(SDLK_a, HOLD))
 	{
-		angularAcceleration = -angularAccFactor * dt;
+		angularAcceleration = -angularAccFactor;
 	}
 
 	GameObject::UpdateMovement(dt);

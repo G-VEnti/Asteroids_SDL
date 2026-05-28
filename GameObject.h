@@ -7,8 +7,7 @@
 class GameObject
 {
 protected:
-	Vector2 position;
-	float rotation;
+	
 	Vector2 scale;
 
 	SDL_Texture* texture;
@@ -36,4 +35,9 @@ public:
 	void Render(SDL_Renderer* renderer);
 	void Update(float dt);
 
+	Vector2 position;
+	float rotation;
+
+	Vector2 GetPosition() { return position; }
+	float GetRotation() { return rotation; }
 };
