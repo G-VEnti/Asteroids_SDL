@@ -14,6 +14,7 @@ public:
 
 	bool GetInvulnerable() { return invulnerable; }
 	int GetSpaceshipLives() { return lives; }
+	int GetScore() { return score; }
 
 	void SetInvulnerable() { invulnerable = false; }
 	void SetScore();

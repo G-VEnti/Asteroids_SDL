@@ -11,6 +11,7 @@ class GamePlayScene : public Scene {
 private:
 	std::vector<GameObject*> bullets;
 	Spaceship* playerShip = nullptr;
+	int round;
 
 public:
 	GamePlayScene() : Scene() {}
@@ -20,6 +21,6 @@ public:
 	void Render(SDL_Renderer* rend) override;
 	void Exit() override;
 
-	void AsteroidSpawn(SDL_Renderer* rend);
+	void AsteroidSpawn(SDL_Renderer* rend, int round);
 
 };

@@ -2,7 +2,7 @@
 
 void MenuScene::Start(SDL_Renderer* rend)
 {
-	std::cout << "=== Welcome to Asteroids === \n\n 1 - Start game";
+	std::cout << "=== Welcome to Asteroids === \n\n Insert 1 to start game: ";
 
 }
 

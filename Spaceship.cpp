@@ -27,7 +27,7 @@ void Spaceship::LooseLife()
 {
 	lives--;
 	invulnerable = true;
-	std::cout << lives << std::endl;
+	std::cout << "Lives left = " << lives << std::endl;
 }
 
 void Spaceship::SetScore()

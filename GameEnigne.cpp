@@ -41,9 +41,9 @@ void GameEngine::Update() {
 	std::map<std::string, Scene*> gameScene;
 	gameScene["MainMenu"] = new MenuScene();
 	gameScene["Gameplay"] = new GamePlayScene();
-	gameScene["HighScore"] = new HighscoreScene();
+	//gameScene["HighScore"] = new HighscoreScene();
 
-	Scene* currentScene = gameScene["Gameplay"];
+	Scene* currentScene = gameScene["MainMenu"];
 	currentScene->Start(renderer);
 
 	while (!IM.GetQuit())
