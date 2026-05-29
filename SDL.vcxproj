@@ -25,6 +25,7 @@
     <ClCompile Include="GameObject.cpp" />
     <ClCompile Include="GameplayScene.cpp" />
     <ClCompile Include="InputManager.cpp" />
+    <ClCompile Include="MenuScene.cpp" />
     <ClCompile Include="Scene.cpp" />
     <ClCompile Include="source\main.cpp" />
     <ClCompile Include="Spaceship.cpp" />

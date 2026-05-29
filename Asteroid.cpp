@@ -5,7 +5,7 @@ Asteroid::Asteroid(SDL_Renderer* renderer, Vector2 pos, float rot, Vector2 scl) 
 	position = pos;
 	rotation = rot;
 	scale = scl;
-	speed = 1 + (rand() % 3);
+	speed = (2 + (rand() % (8 - 2))) / 100.f;
 
 	/*Vector2 dir;
 	float rotInRad = rotation * (M_PI / 180.0f);

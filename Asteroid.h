@@ -9,4 +9,5 @@ public:
 
 private:
 	float speed = 0.f;
+	bool inScreen = false;
 };

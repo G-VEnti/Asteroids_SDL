@@ -67,3 +67,27 @@ void GameObject::Update(float dt)
 {
 	UpdateMovement(dt);
 }
+
+bool GameObject::CheckCollision(const GameObject* other)
+{
+	float left1 = position.x;
+	float right1 = position.x + size.x * scale.x;
+	float top1 = position.y;
+	float bottom1 = position.y + size.y * scale.y;
+
+	float left2 = other->position.x;
+	float right2 = other->position.x + other->size.x * other->scale.x;
+	float top2 = other->position.y;
+	float bottom2 = other->position.y + other->size.y * other->scale.y;
+
+	return (left1 < right2 && right1 > left2 && top1 < bottom2 && bottom1 > top2);
+}
+
+void GameObject::Teleport()
+{
+	if (position.x + size.x < 0) position.x = SCREEN_WIDTH;
+	else if (position.x > SCREEN_WIDTH) position.x = -size.x;
+
+	if (position.y + size.y < 0) position.y = SCREEN_HEIGHT;
+	else if (position.y > SCREEN_HEIGHT) position.y = -size.y;
+}

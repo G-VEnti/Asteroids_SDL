@@ -40,4 +40,8 @@ public:
 
 	Vector2 GetPosition() { return position; }
 	float GetRotation() { return rotation; }
+
+	bool CheckCollision(const GameObject* other);
+
+	void Teleport();
 };

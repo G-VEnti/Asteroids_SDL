@@ -23,13 +23,25 @@ Spaceship::Spaceship(SDL_Renderer* renderer, Vector2 pos, float rot, Vector2 scl
 	angularAcceleration = 1.2;
 }
 
+void Spaceship::LooseLife()
+{
+	lives--;
+	invulnerable = true;
+	std::cout << lives << std::endl;
+}
+
+void Spaceship::SetScore()
+{
+	score += 50;
+	std::cout << score << std::endl;
+}
+
 void Spaceship::UpdateMovement(float dt)
 {
 	linearAcceleration = Vector2();
 
 	if (IM.GetKey(SDLK_w, HOLD))
 	{
-
 		Vector2 dir;
 		float rotInRad = rotation * (M_PI / 180.0f);
 		dir.x = cos(rotInRad);
